@@ -1,9 +1,20 @@
 from django.db import models
 
-class bukuku (models.Model):
+class Buku(models.Model):
+    judul = models.CharField(max_length=100)
+    pengarang = models.CharField(max_length=50)
+    penerbit = models.CharField(max_length=50)
+    tahun_terbit = models.IntegerField()
+
+class RakBuku(models.Model):
     nama = models.CharField(max_length=50)
-    npm = models.CharField(max_length=50)
-    prodi = models.CharField(max_length=50)
+    lokasi = models.CharField(max_length=50)
+
+class Penerbit(models.Model):
+    nama = models.CharField(max_length=50)
+    alamat = models.CharField(max_length=100)
     
-    def __str__(self):
-        return '{}. {}'. format(self.id,self.nama)
+    def _str_(self):
+         return '{}. {}'. format(self.id,self.nama)
+
+
