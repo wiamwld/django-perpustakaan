@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 
 
-def tabel(request):
+def base(request):
     return render(request, 'base.html')
 
-def login(request):
+def index(request):
     return render(request, 'index.html')
